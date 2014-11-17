@@ -1,0 +1,505 @@
+/* Custom Classes
+------------------------------------------------------------ */
+.group:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+* html .group { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+
+/***********************
+GENERAL
+************************/
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+  &:focus {
+    outline: 0;
+  }
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:100;
+  letter-spacing: 2px;
+  line-height:1.25em;
+}
+
+#wrapper{
+  max-width:1000px;
+  margin: 0 auto;
+  padding: 150px 5% 0;
+}
+
+a {
+  text-decoration:none;
+}
+
+img {
+  max-width:100%;
+}
+
+h3{
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  margin: 0 0 1em 0;
+  font-style: italic;
+  font-weight:200;
+  letter-spacing:1px  ;
+  text-shadow: -1px 1px 1px #cdcbcb;
+  font-size: 1.25em;
+}
+
+
+/***********************
+HEADING
+************************/
+
+header{
+  padding: 15px 5%;
+  width:100%;
+  position:fixed;
+  z-index:200;
+  height: 150px;
+}
+
+#logo {
+  float:left;
+}
+
+#logo img {
+  width: 300px;
+  position: relative;
+  left: -25px;
+}
+
+h1 {
+  margin:15px 0;
+  font-size:1.75em;
+  font-weight:normal;
+  line-height:0.8em;
+  text-transform:uppercase;
+  letter-spacing: 20px;
+  text-shadow: -2px 2px 1px #cdcbcb;
+  text-align: center;
+
+}
+
+
+h2 {
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  margin:17px 0 0;
+  font-size:1.75em;
+  font-weight:400;
+  font-style: italic;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+
+}
+
+/***********************
+NAVIGATION
+************************/
+
+nav {
+  text-align:center;
+  padding: 10px 0;
+  margin:20px 0 0;
+  float:right;
+}
+
+nav ul{
+  list-style:none;
+  margin:0 10px;
+  padding:0;
+}
+
+nav li{
+  display:inline-block;
+
+}
+
+nav a {
+  font-weight:100;
+  padding:15px 10px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+}
+
+nav a.selected {
+  font-weight:300;
+}
+
+.contact {
+  display:inline-block;
+  float:right;
+  font-size:0.9em;
+}
+
+
+
+/***********************
+FOOTER
+************************/
+
+footer{
+  font-size:0.25em;
+  text-align:center;
+  clear:both;
+  padding-top: 50px;
+  color:#cecccb;
+  letter-spacing: 0;
+}
+
+.social-icon{
+  width:40px;
+  height:40px;
+  margin:0 5px;
+  opacity:0.8;
+  transition: all .3s ease-in;
+  }
+
+.social-icon:hover{
+-webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3) ease-in;
+
+opacity:1;
+}
+
+
+/***********************
+FILTER
+************************/
+
+dl { padding: 2em 2em 0 0; color: #777;
+ float:right}
+dt, dd { float: left; }
+dt { margin: 5px; }
+.filter li { float: left; }
+.filter li:after, nav li:after{ content: "|"; }
+.filter li:last-child:after, nav li:last-child:after { content: ""; }
+.filter a {
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight:100;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+ }
+
+ul { list-style: none; margin:0;
+  padding:0; }
+
+/* Portfolio Items */
+/*.portfolio li {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 1.3em;
+
+}
+
+.portfolio a {
+  display: block;
+  text-decoration: none;
+}
+
+.portfolio img {
+  width: 295px;
+  height: 166px;
+  display: block;
+}*/
+
+ul.filter.group {
+  padding:0 0 20px 0 ;
+ /* font-size: 0.85em;*/
+
+}
+
+.current a {
+  font-weight:300;
+}
+
+dd {
+  margin:0;
+}
+
+
+
+
+
+
+/***********************
+PORTFOLIO HOVER TEXT
+************************/
+
+
+/*
+.photo-grid {
+	margin: 1em auto;
+	max-width: 1106px;
+	text-align: center;
+}
+*/
+.photo-grid li {
+	/*border: 5px solid white;
+	display: inline-block;
+	margin: 1em;
+	width: 289px;*/
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  float: left;
+}
+.photo-grid li:nth-child(3n) {
+  margin-right: 0;
+}
+
+/*
+.photo-grid img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+*/
+
+.photo-grid figure {
+	/*height: 166px;*/
+	overflow: hidden;
+	position: relative;
+	/*width: 295px;*/
+  width: 100%;
+}
+
+/*.photo-grid figcaption {
+	background: rgba(0,0,0,0.8);
+	color: white;
+	display: table;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}*/
+
+/*.photo-grid figcaption p {
+	display: table-cell;
+	font-size: 0.5em;
+	position: relative;
+	top: -40px;
+	width: 295px;
+	vertical-align: middle;
+}*/
+
+.photo-grid li:hover figcaption {
+	opacity: 1;
+}
+
+.photo-grid img {
+	display: block;
+	height: auto;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+	width: 100%;
+}
+
+/*
+.photo-grid li:hover img {
+	-webkit-transform: scale(1.4);
+	-moz-transform: scale(1.4);
+	transform: scale(1.4);
+}
+*/
+
+.photo-grid figcaption p {
+	display: table-cell;
+	padding:10px 10px 10px 25px;
+	font-size: 0.85em;
+  line-height: 1.25em;
+  font-weight:100;
+  letter-spacing:1px;
+	position: relative;
+	top: -40px;
+	width: 295px;
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+	vertical-align: middle;
+  overflow:scroll;
+}
+
+.photo-grid figcaption p span {
+  text-transform:uppercase;
+  font-weight:200;
+
+}
+
+.photo-grid li:hover figcaption p {
+	-moz-transform: translateY(40px);
+	-webkit-transform: translateY(40px);
+	transform: translateY(40px);
+}
+
+.photo-grid figcaption {
+	background: rgba(0,0,0,0.8);
+	/*color: white;*/
+	display: table;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+	-webkit-transition-delay: 100ms;
+	-moz-transition-delay: 100ms;
+	transition-delay: 100ms;
+	z-index: 100;
+}
+
+
+
+
+/***********************
+PAGE ABOUT
+************************/
+
+.profile-photo{
+  display:block;
+  max-width:400px;
+  margin:0 auto 30px;
+  border: 1px solid #8d8c8d;
+  box-shadow: -2px 2px 1px #cdcbcb;
+  float:left;
+}
+
+
+/***********************
+PAGE CONTACT
+************************/
+
+.contact-info{
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:0.9em;
+}
+
+.contact-info a{
+  display:block;
+  min-height:20px;
+  background-repeat:no-repeat;
+  background-size:20px 20px;
+  padding: 0 0 0 30px;
+  margin: 0 0 10px;
+}
+
+.contact-info li.phone a {
+  background-image:url('../image/phone.png');
+}
+
+.contact-info li.mail a {
+  background-image:url('../image/mail.png');
+}
+
+.contact-info li.twitter a {
+  background-image:url('../image/twitter.png');
+}
+
+
+
+/***********************
+COLOURS
+************************/
+
+/* site body */
+body {
+  background-color:#fff;
+  color:#8d8c8d;
+}
+
+/* header */
+header {
+  background: #ffffff;
+  border-color: #3b3b3b;
+
+}
+
+/* nav bg on moblie */
+nav {
+  background: #ffffff;
+
+}
+
+h1, h2, h3 {
+  color:#3b3b3b;
+}
+
+/* links */
+a{
+  color: #8d8c8d;
+  font-weight: 200;
+}
+
+/* nav link colours */
+nav a, .filter a {
+  color: #cecccb;
+}
+
+/* selected nav link colours */
+.selected a, a:hover, .filter a:hover, .current a {
+  color:#3b3b3b;
+}
+
+.photo-grid figcaption p span {
+color:#fff;
+}
+
+.photo-grid figcaption p {
+color:#cecccb;
+}
+
+/*------------------------------------------------------------------------------------------
+  iFrame Video Wrap - makes 100% with auto height
+ -----------------------------------------------------------------------------------------*/
+
+.video-container {
+  display: none;
+  padding-bottom: 40px;
+  z-index:201;
+}
+.video-close-bar {
+  height: 30px;
+  /*background: #222;*/
+}
+.video-close-button {
+  float: right;
+  border: 1px solid #cecccb;
+  background: #FFF;
+  font-weight:200;
+}
+/* http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px;
+}
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-description span {
+  font-weight: bold;
+  text-transform: uppercase;
+  /*letter-spacing: -1px;*/
+}
